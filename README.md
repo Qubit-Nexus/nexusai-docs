@@ -1,6 +1,5 @@
 ## **Nexus AI**
-
-#### **Overview**
+### **Overview**
 
 This document describes the architecture of a conversational AI platform that integrates multiple data sources, knowledge base processing, intelligent agents, monitoring, and response storage. The system enables users to create projects, manage data sources, ask questions, and receive responses powered by specialized agents (KB Agent, BI Agent, Monitoring Agent).
 
@@ -10,26 +9,25 @@ The architecture follows a modular, agent-based design with centralized chat his
 
 ![](https://qubitnexus-knowledge-base-bucket.s3.us-east-2.amazonaws.com/summary_pdfs/doc-imges/Tect+Data+FLow.jpg) 
 
-**Component Description**
-
-* User Interaction Layer  
-  This layer provides the primary entry points for users:  
-* Login  
+#### **Component Description**
+* **User Interaction Layer**  
+  * This layer provides the primary entry points for users:  
+* **Login** 
   * Authenticates users.  
   * Grants access to chat and project management features.  
-* Chat Page  
+* **Chat Page**  
   * Displays chats and connected data sources.  
   * Central workspace for interaction.  
-* Create a Project  
+* **Create a Project** 
   * Group chats and associated configurations.  
   * Logical container for knowledge and agent settings.  
-* Create a New Chat  
+* **Create a New Chat** 
   * Starts a new conversation session.  
   * Links to selected data sources and projects.  
-* Ask a Question  
+* **Ask a Question** 
   * The user submits a query.  
   * Initiates agent selection and decision workflow.  
-* Additional Prompting (Future)  
+* **Additional Prompting (Future)**  
   * Optional input to refine agent behavior.  
   * Improves contextual accuracy.
 
@@ -37,20 +35,20 @@ The architecture follows a modular, agent-based design with centralized chat his
 * Data Management Layer  
   Manage Datasource (Add, Update, Delete)  
    Supports ingestion and management of structured and semi-structured data:  
-* CSV  
-* Database (e.g., PostgreSQL)  
-* Excel  
-* PDF
+    * CSV  
+    * Database (e.g., PostgreSQL)  
+    * Excel  
+    * PDF
 
-**Note: A selected data source cannot be changed during an active chat session, ensuring consistency and reproducibility of responses.**
+  **Note: A selected data source cannot be changed during an active chat session, ensuring consistency and reproducibility of responses.**
 
-* Chat & Orchestration Layer  
+* **Chat & Orchestration Layer**  
   This layer orchestrates user input and system processing.  
-* Chat History  
+* **Chat History**  
   * Stores previous interactions.  
   * Maintains context for multi-turn conversations.  
   * Used by agents to improve contextual understanding.  
-* Store Response  
+* **Store Response**  
   * Persists system-generated responses.  
   * May include metadata and decision logs.  
       
